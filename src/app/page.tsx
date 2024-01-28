@@ -1,4 +1,6 @@
 import CreateTopicForm from "@/components/topics/CreateTopicForm";
+import TopicList from "@/components/topics/TopicList";
+import { Divider } from "@nextui-org/react";
 
 export default async function Home() {
 
@@ -8,8 +10,10 @@ export default async function Home() {
         <div className="col-span-3">
           Top Posts
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 border border-gray-300 rounded-2xl p-2">
           <CreateTopicForm/>
+          <Divider className="my-3 bg-gray-300"/>
+          <TopicList/>
         </div>
       </div>
     </div>

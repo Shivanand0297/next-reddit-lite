@@ -10,7 +10,7 @@ import Link from "next/link";
 const Header = () => {
   
   return (
-    <Navbar className="bg-slate-700">
+    <Navbar className="border">
       <Link href="/">
         <p className="font-bold text-inherit">Reddit</p>
       </Link>

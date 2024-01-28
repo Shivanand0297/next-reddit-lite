@@ -16,8 +16,6 @@ interface ICreateFormState {
   };
 }
 export const createTopic = async (formState: ICreateFormState, formData: FormData): Promise<ICreateFormState> => {
-  // TODO: revalidate home page after create topic
-
   const name = formData.get("name");
   const description = formData.get("description");
   const session = await auth();
