@@ -1,6 +1,7 @@
 import { paths } from '@/app/paths';
 import { PostsWithData } from '@/db/queries/posts';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 
 type PostListProp = {
@@ -8,6 +9,7 @@ type PostListProp = {
 }
 
 export default async function PostList({ fetchPosts }: PostListProp) {
+  await new Promise(resolve => setTimeout(resolve, 2000));
   const posts = await fetchPosts();
 
   const renderedPosts = posts.map((post) => {
